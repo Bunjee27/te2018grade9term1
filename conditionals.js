@@ -8,6 +8,12 @@ console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
 
+if (age>=18 || withAdult == "yes") {
+	console.log("Congrats, you can see the movie!")
+}
+else{
+	console.log("Sorry, you can't see the movie!")
+}
 
 // **** Problem 2: Umbrella ****
 // You should bring an umbrella when you travel, but only if it is raining.
@@ -18,7 +24,15 @@ console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 
-
+if (raining){
+	console.log("You should bring your umbrella")
+}
+if (!thunderstorming){
+	console.log("You should bring your umbrella.")
+}
+else {
+	console.log("You should not bring your umbrella.")
+}
 // **** Problem 3: Monkey Trouble ****
 // There are two monkeys: Bubbles and Spankey. You are in trouble if both of
 // them are smiling, or if neither are smiling. Write code that prints if we
@@ -27,9 +41,15 @@ console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
 
+if (bubbles == "yes" && spankey == "yes"){
+	console.log("You are in TROUBLE")
+}
+else{
+	console.log("You have evaded trouble for now")
+}
 
-// **** Problem 4: First Place ****
-// Write code that prints the largest of three scores. If there is a tie for
+//**** Problem 4: First Place ****
+//Write code that prints the largest of three scores. If there is a tie for
 // first place, simply print one of the tie winners.
 console.log("*** Problem 4: First Place ***");
 let score1 = READLINE.question("Enter the first score: ");
