@@ -24,14 +24,14 @@ console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 
-if (raining){
+if (raining == "yes" && thunderstorming == "no"){
 	console.log("You should bring your umbrella")
 }
-if (!thunderstorming){
-	console.log("You should bring your umbrella.")
+else{
+	console.log("You should not bring your umbrella")
 }
-else {
-	console.log("You should not bring your umbrella.")
+if (raining == "no" && thunderstorming == "no"){
+	console.log("It's nice weather outside!")
 }
 // **** Problem 3: Monkey Trouble ****
 // There are two monkeys: Bubbles and Spankey. You are in trouble if both of
@@ -41,13 +41,12 @@ console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
 
-if (bubbles == "yes" && spankey == "yes"){
+if (bubbles == "yes" && spankey == "yes" || bubbles =="no" && spankey == "no"){
 	console.log("You are in TROUBLE")
 }
 else{
 	console.log("You have evaded trouble for now")
 }
-
 //**** Problem 4: First Place ****
 //Write code that prints the largest of three scores. If there is a tie for
 // first place, simply print one of the tie winners.
@@ -55,6 +54,16 @@ console.log("*** Problem 4: First Place ***");
 let score1 = READLINE.question("Enter the first score: ");
 let score2 = READLINE.question("Enter the second score: ");
 let score3 = READLINE.question("Enter the third score: ");
+
+if (score1 >= score2 && score1 >= score3){
+	console.log("The greatest score is " + score1)
+}
+if (score2 >= score1 && score2 >= score3){
+	console.log("The greatest score is " + score2)
+}
+if (score3 >= score1 && score3 >= score2){
+	console.log("The greatest score is " + score3)
+}
 
 
 // **** Problem 5: Phone Shopping ****
@@ -69,6 +78,21 @@ let score3 = READLINE.question("Enter the third score: ");
 console.log("*** Problem 5: Phone Shopping ***");
 let money = READLINE.question("How much money do you have?: ");
 
+if (money <= 30 && money >= 0){
+	console.log("You can buy a prepaid phone!")
+}
+if (money <= 100 && money > 30){
+	console.log("You can buy a bottom-tier phone!")
+}
+if (money <= 300 && money > 100){
+	console.log("You can buy a middle tier phone!")
+}
+if (money <= 600 && money > 300){
+	console.log("You can buy a top-tier phone!")
+}
+if (money >= 600){
+	console.log("You can buy a top-tier phone!")
+}
 
 // **** Problem 6: Guess My Number ****
 // Write code that plays a simple number guessing game with a user. You can
@@ -77,5 +101,22 @@ let money = READLINE.question("How much money do you have?: ");
 // If their guess is myNum +/- 3, tell them they are "warm"; otherwise tell
 // them they are cold.
 console.log("*** Problem 6: Guess My Number ***");
-let myNum = 5;
+let myNum = 27;
 let guess = READLINE.question("I'm thinking of a number. Guess it: ");
+
+if (guess = (myNum -= 3)){
+	console.log("warm")
+}
+else{
+	console.log("cold")
+}
+if (guess = (myNum += 3)){
+	console.log("warm")
+}
+else{
+	console.log("cold")
+}
+if (guess == myNum){
+	console.log("You guessed it!")
+}
+
