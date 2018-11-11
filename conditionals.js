@@ -119,4 +119,3 @@ else{
 if (guess == myNum){
 	console.log("You guessed it!")
 }
-
