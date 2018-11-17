@@ -20,11 +20,13 @@ console.log("When you respond to questions, insert the word inside asterisks!!!"
 player.gender = READLINE.question("What is your gender?: ")
 if (player.gender == "female"){
   pronoun = "she";
-  possess = "her"
+  possess = "her";
+  pronoun2 = "she";
 }
 else {
   pronoun = "he";
   possess = "his"
+  pronoun2 = "him"
 }
 player.name = READLINE.question("What is your name?: ");
 console.log(`${player.name} arrives on the island of ZEZE.`);
@@ -44,7 +46,7 @@ if(enterHouse == "y" || enterHouse == "yes") {
     
     let planA = READLINE.question("Do you **scream for help** or **play dead?**")
     if (planA == "scream for help" || planA == "scream"){
-      console.log(`${player.name} screams out and the masked man throws a dagger at your head...`)
+      console.log(`${player.name} screams out and the masked man throws a dagger at ${possess} head...`)
       console.log(`It hits and ${player.name} dies.`)
     }
 
