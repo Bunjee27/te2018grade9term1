@@ -24,3 +24,21 @@ if(userAge < 17) {
 	console.log("No R-rated movies")
 }
 
+
+let dog = {
+	numLegs = 4
+	amputate: function(legs) {
+		this.numLegs = this.numLegs - legs;
+	}
+};
+
+
+
+let fellow = "humpty dumpty";
+console.log(`string: ${fellow}`)
+let len = fellow.length
+console.log(`length: ${len}`)
+let six = fellow.charAt(7);
+console.log(`Char at index 7`)
+console.log(`Index of D: ${fellow`)
+
