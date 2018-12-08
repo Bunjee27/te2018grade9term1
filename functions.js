@@ -29,13 +29,13 @@ function scream(name) {
  //what the user decides.
 
 let user = READLINE.question("Should the message be printed 1 or 5 times?: ")
-  if (user = 1){
-   sayLeave("Elijah");
 
+  if (user == 5){
+  scream("Elijah");
   }
 
-  if (user = 5){
-  scream("Elijah");
+  else{
+    sayLeave("Elijah")
   }
 
 
@@ -53,16 +53,23 @@ parrotTrouble(true, 6) → true
 parrotTrouble(true, 7) → false
 parrotTrouble(false, 6) → false
 *******************************************************************************/
+function parrotTrouble(talking,hour){
+  if (talking && (hour < 7 || hour > 20)){
+    return true;
+  }
+    else{
+      return false;
+    }
+}
 
+parrotTrouble(true,21);
 
 
 // Remove comment below to test this function.
-//testParrotTrouble();
+testParrotTrouble();
 
-
-
-
-
+//let talking = READLINE.question("Is the parrot talking? True or False: ")
+//let hour = READLINE.question("What hour is it? : ")
 
 
 

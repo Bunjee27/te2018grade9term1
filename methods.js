@@ -8,14 +8,25 @@ let bankAccount = {
   withdrawalLimit: 50,
   balance: 100,
   bankName: 'Chase Bank',
-  deposit: function() {
+  deposit: function(amount) {
+    this.balance = amount + this.balance;
+    console.log(`Your deposit went through successfully! $${this.balance} in account`)
 
   },
-  withdraw: function() {
-
+  withdraw: function(withdrawal) {
+    if(withdrawal > this.withdrawalLimit){
+       
+         console.log("You withdrawal has been declined")
+  }
+    else{
+      this.balance = this.balance - withdrawal
+      console.log("Your withdrawal has been successful!")
+    }
   },
+
   createGreeting: function() {
-
+    let greeting = "Hi,"+this.owner+"! Welcome to "+ this.bankName + "!";
+    return greeting;
   }
 };
 
@@ -25,6 +36,8 @@ let bankAccount = {
 // Then fill in the createGreeting method so that it will RETURN a greeting,
 // including the bank name and owner name
 // Our tests will then print that returned greeting to the terminal
+bankAccount.owner = "Bunjee"; 
+
 
 // **** Problem 1 Tests ****
 console.log('**** Problem 1 Tests ****');
@@ -70,6 +83,15 @@ console.log(`The balance should have been decreased by $20. \nPrior Balance: ${p
 // utilize the "this" keyword to refer to properties, or call other methods,
 // owned by the object.
 
+let student = {
+  name: Bunjee,
+  age: 14,
+  favSport: 'Football',
+  favSubject: 'Spanish',
+  gpa: function(){
 
+  },
+
+}
 // Test all of your object's methods below.
 console.log('\n\n**** Problem 4 Tests ****');
