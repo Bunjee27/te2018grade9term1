@@ -30,18 +30,15 @@ frontAgain("ed") → true
 
 
 function frontAgain(str) {
-let endString = str.substring(str.length-2, str.length);
-let beginString = str.substring(str.charAt(0),str.charAt(1));
+  let endString = str.substring(str.length-2, str.length);
+    let beginString = str.substring(str.charAt(0),str.charAt(1));
 
-  if (beginString = endString){
-    return true
-  }
-    if (endString = beginString){
-      return true
-    }
-      else{
+      if (beginString == endString){
         return false
       }
+        else{
+          return true
+        }
 }
 
 
